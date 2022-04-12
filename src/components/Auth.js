@@ -1,12 +1,20 @@
 import React from "react";
 
 import "./Auth.css";
+import { login } from '../store/auth-slice';
+import { useDispatch } from "react-redux";
 
 const Auth = () => {
+  const dispatch = useDispatch();
+  const handleSubmit = (e) => {
+    console.log(214);
+    e.preventDefault();
+    dispatch(login());
+  }
   return (
     <div className="container">
       <h1>Login</h1>{" "}
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="id">Id</label>
         <input type="text" name="id" id="id" />
         <label htmlFor="password">Password</label>
