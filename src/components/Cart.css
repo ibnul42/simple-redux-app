@@ -11,7 +11,7 @@ li {
   cursor: pointer;
 }
 .cart-container {
-  border: 1px solid black;
+  border: 1px solid #ddd;
   border-radius: 10px;
   margin: 20px;
   height: 400px;
